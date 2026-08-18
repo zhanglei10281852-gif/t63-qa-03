@@ -1,0 +1,22 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Inter, "Segoe UI", "Microsoft YaHei", sans-serif; background: #f3f5f7; color: #1f2933; }
+.app-layout { min-height: 100vh; }
+.brand { height: 64px; display: flex; align-items: center; gap: 10px; padding: 0 20px; color: white; font-size: 16px; font-weight: 700; white-space: nowrap; overflow: hidden; }
+.ant-layout-header.app-header { height: 64px; padding: 0 24px; background: #fff; border-bottom: 1px solid #dfe5e8; color: #17212b; line-height: normal; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.header-heading { min-width: 0; display: flex; align-items: baseline; gap: 14px; }
+.header-title { color: #17212b; font-size: 17px; font-weight: 650; white-space: nowrap; }
+.header-subtitle { color: #66737f; font-size: 13px; font-weight: 400; white-space: nowrap; }
+.header-actions { display: flex; align-items: center; gap: 8px; color: #34404b; white-space: nowrap; }
+.service-status .ant-badge-status-text { color: #34404b; font-size: 13px; }
+.operator-chip { display: flex; align-items: center; gap: 8px; color: #34404b; font-size: 13px; font-weight: 500; }
+.operator-chip .ant-avatar { background: #e5f4ef; color: #087f5b; }
+.header-actions .ant-btn { color: #4c5965; }
+.header-actions .ant-btn:hover { color: #087f5b !important; background: #edf8f4 !important; }
+.content { padding: 20px; min-width: 0; }
+.toolbar { display: flex; gap: 10px; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; }
+.panel { background: white; border: 1px solid #e5e9ed; border-radius: 6px; padding: 16px; }
+.status-grid { display: grid; grid-template-columns: repeat(4, minmax(150px, 1fr)); gap: 12px; margin-bottom: 16px; }
+.metric { border-left: 4px solid #087f5b; background: white; padding: 14px; border-radius: 4px; }
+.metric strong { display: block; font-size: 24px; margin-top: 4px; }
+.ant-table-wrapper { max-width: 100%; overflow-x: auto; }
+@media (max-width: 900px) { .status-grid { grid-template-columns: repeat(2, 1fr); } .content { padding: 12px; } .header-subtitle { display: none; } }
