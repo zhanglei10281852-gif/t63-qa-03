@@ -42,10 +42,7 @@ func (s Service) Assign(ctx context.Context, assignments []Assignment, actor, re
 				results[index] = Result{ShiftID: assignment.ShiftID, VehicleID: assignment.VehicleID, Error: ctx.Err().Error()}
 				return
 			}
-			dispatchCtx := context.Background()
-			requestInput := dispatch.AssignInput{ShiftID: assignment.ShiftID, VehicleID: assignment.VehicleID, ActorID: actor, RequestID: request}
-			assigned, err := s.Dispatch.AssignShift(dispatchCtx, requestInput)
-			_ = assigned
+			_, err := s.Dispatch.AssignShift(ctx, dispatch.AssignInput{ShiftID: assignment.ShiftID, VehicleID: assignment.VehicleID, ActorID: actor, RequestID: request})
 			results[index] = Result{ShiftID: assignment.ShiftID, VehicleID: assignment.VehicleID, Success: err == nil}
 			if err != nil {
 				results[index].Error = err.Error()
